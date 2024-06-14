@@ -22,12 +22,12 @@ const Book = (props) => {
       <figure>
         <img src={image} alt="" />
         <figcaption><h3>{name}</h3></figcaption>
-      </figure>
+      </figure>   
       <div className="other"><article>By: {author}</article></div>
       <div className="other">Description: {description}</div>
       <div className="other"><h2>Price: {price}</h2></div>
       <div className="other">Available: {available?"Available":"Not available"}</div>
-      <Button LinkComponent={Link} to={`/books/${_id}`} id='button'>Update</Button>
+      <Button  LinkComponent={Link} to={`/books/${_id}`} id='button'>Update</Button>
       <Button onClick={delethandler2} id='button' >delete</Button>
     </div>
   )

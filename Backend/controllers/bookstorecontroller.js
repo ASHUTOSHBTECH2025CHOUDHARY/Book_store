@@ -1,4 +1,3 @@
-const { assert } = require('console');
 const Books=require('../model/bookstoremodle')
 
 exports.getallbooks= async (req,res)=>{
@@ -12,6 +11,7 @@ exports.getallbooks= async (req,res)=>{
 }
 
 exports.addbook=async(req,res)=>{
+    console.log(req.body)
     const book=await Books.create(req.body);
     
     res.status(201).json({
@@ -48,8 +48,9 @@ exports.deletebook=async(req,res)=>{
     })
 }
 exports.getbook=async(req,res)=>{
-    const books=await Books.findById(req.params.id)
     
+    const books=await Books.findById(req.params.id)
+
     if(!books){
         return res.status(500).json({Message:"No book found"})
     }

@@ -12,7 +12,7 @@ const Bookdetails = () => {
   useEffect(() => {
     
     const fetchHandler= async()=>{
-      await axios.get(`http://localhost:3001/bookstore/getbook/${id}`).then((res)=>{
+       axios.get(`http://localhost:3001/bookstore/getbook/${id}`).then((res)=>{
         console.log(res.data.Books);
         setinputs(res.data.Books)
       }).catch(err=>console.log(err))
