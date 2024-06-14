@@ -10,7 +10,7 @@ const Book = (props) => {
   console.log(_id)
   const history=useNavigate();
   const delethandler=async()=>{
-    await axios.delete(`http://localhost:3001/bookstore/deletebook/${_id}`).
+    await axios.delete(`${window.location.origin}/bookstore/deletebook/${_id}`).
     then((res)=>console.log(res.data)).
     then(()=>history('/add'))
   }

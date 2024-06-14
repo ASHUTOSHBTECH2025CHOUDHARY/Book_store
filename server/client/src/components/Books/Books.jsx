@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Book from './Book';
 import './Books.css'
-const URL='http://localhost:3001/bookstore/getallbooks';
+// const  =;
 
 const fetchHandler=async()=>{
-    return await axios.get(URL).then((res)=>res.data)
+    return await axios.get(`${window.location.origin}/bookstore/getallbooks`).then((res)=>res.data)
 }
 
 const Books = () => {

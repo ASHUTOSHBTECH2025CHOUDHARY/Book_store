@@ -24,7 +24,7 @@ const Addbook = () => {
   }
   
   const sendrequest=async()=>{
-    await axios.post("http://localhost:3001/bookstore/addbooks",{
+    await axios.post(`${window.location.origin}/bookstore/addbooks`,{
       name:String(inputs.name),
       author:String(inputs.author),
       description:String(inputs.description),
